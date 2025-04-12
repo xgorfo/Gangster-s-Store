@@ -1,19 +1,23 @@
 import './App.css';
 import MainPage from './pages/MainPage'
 import SecondPage from './pages/SecondPage';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Aside from './components/Aside';
 
 function App() {
   return (
     <Router>
-      <nav>
-        <Link to="/">Главная</Link>
-        <Link to="/second">О нас</Link>
-      </nav>
+       <Header></Header>
+       <div className='page-content'>
+      
+        <Aside></Aside>
+
         <Routes>
-          <Route path='/' element={<MainPage/>}/>
-          <Route path='/second' element={<SecondPage/>}/>
-        </Routes>
+           <Route path='/' element={<MainPage/>}/>
+           <Route path='/cart' element={<SecondPage/>}/>
+         </Routes>
+       </div>
     </Router>
   );
 }

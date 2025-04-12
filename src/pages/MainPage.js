@@ -1,22 +1,32 @@
-import logo from '../logo.svg';
+import ProductCard from "../components/ProductCard";
 
 function MainPage() {
+
+    const products = [
+      {
+        id: 1,
+        name: 'Ноутбук',
+        price: 500,
+        description: 'Ноутбук очень классный ваще отличный ноут !',
+        img: ''
+      },
+      {
+        id: 2,
+        name: 'Планшет',
+        price: 200,
+        description: 'Планшет нереально классный ваще отличный планшет !',
+        img: ''
+      }
+    ]
+
     return(
     <div className="App">
-      <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-            Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-            </a>
-      </header>
+      <h2>Товары</h2>
+      {products.map((product) => (
+        <ProductCard name={product.name} desc={product.description} price={product.price} img={product.img}>
+
+        </ProductCard>
+      ))}
     </div>
     );
 }
