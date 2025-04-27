@@ -1,13 +1,14 @@
 import React from 'react';
 
-function Aside() {
+function Aside({ setSelectedCategory }) {
   return (
     <aside className="aside">
       <h2>Категории</h2>
       <ul>
-        <li>Ноутбуки</li>
-        <li>Смартфоны</li>
-        <li>Аксессуары</li>
+        <li><button onClick={() => setSelectedCategory('Все')}>Все</button></li>
+        <li><button onClick={() => setSelectedCategory('Ноутбуки')}>Ноутбуки</button></li>
+        <li><button onClick={() => setSelectedCategory('Смартфоны')}>Смартфоны</button></li>
+        <li><button onClick={() => setSelectedCategory('Аксессуары')}>Аксессуары</button></li>
       </ul>
     </aside>
   );

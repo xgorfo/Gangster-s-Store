@@ -1,24 +1,20 @@
-import './App.css';
-import MainPage from './pages/MainPage'
-import SecondPage from './pages/SecondPage';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Aside from './components/Aside';
+import MainPage from './pages/MainPage';
+import CartPage from './pages/CartPage';
 
 function App() {
-  return (
-    <Router>
-       <Header></Header>
-       <div className='page-content'>
-      
-        <Aside></Aside>
+  const [cart, setCart] = useState([]);
 
-        <Routes>
-           <Route path='/' element={<MainPage/>}/>
-           <Route path='/cart' element={<SecondPage/>}/>
-         </Routes>
-       </div>
-    </Router>
+  return (
+    <div>
+      <Header cart={cart} />
+      <Routes>
+        <Route path="/" element={<MainPage cart={cart} setCart={setCart} />} />
+        <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
+      </Routes>
+    </div>
   );
 }
 
