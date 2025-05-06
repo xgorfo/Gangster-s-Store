@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // Импортируем motion
+import { motion } from 'framer-motion';
 
 function ProductCard({ product, addToCart }) {
   return (
