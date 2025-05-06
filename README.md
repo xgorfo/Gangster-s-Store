@@ -1,3 +1,19 @@
+## If you want to see what it looks like
+
+![image](https://github.com/user-attachments/assets/ed696bb8-8518-48e5-8696-3727ef15db95)
+![image](https://github.com/user-attachments/assets/9788417d-2d35-478a-b7bd-2c87d809504c)
+![image](https://github.com/user-attachments/assets/4a32e553-3421-4e75-8979-6b7b2129779f)
+![image](https://github.com/user-attachments/assets/e7befb1d-6995-4c43-8c6c-029df3fef631)
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
